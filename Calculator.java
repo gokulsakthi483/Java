@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
 public class Calculator {
-    // Constructor
+  
     public Calculator() {
-        // Not necessary to initialize the scanners in the constructor
+      
     }
 
-    // Methods for operations
     public int addition(int x, int y) {
         return x + y;
     }
@@ -22,29 +21,27 @@ public class Calculator {
     public int division(int x, int y) {
         if (y == 0) {
             System.out.println("Cannot divide by zero.");
-            return 0;  // Avoid division by zero error
+            return 0; 
         }
         return x / y;
     }
 
-    // Main method
     public static void main(String[] args) {
         Scanner operators = new Scanner(System.in);
         Scanner operands = new Scanner(System.in);
 
         System.out.println("What operation? ('+', '-', '*', '/')");
-        char operator = operators.next().charAt(0);  // Read operator
+        char operator = operators.next().charAt(0);  
 
         System.out.println("Insert 2 numbers:");
         System.out.print("operand 1: ");
-        int x = operands.nextInt();  // Read first operand
+        int x = operands.nextInt();  
         System.out.print("operand 2: ");
-        int y = operands.nextInt();  // Read second operand
+        int y = operands.nextInt(); 
 
-        Calculator calc = new Calculator();  // Create Calculator object
+        Calculator calc = new Calculator();
         int result = 0;
 
-        // Switch to handle the operation
         switch (operator) {
             case '+':
                 result = calc.addition(x, y);
@@ -63,7 +60,7 @@ public class Calculator {
                 return;
         }
 
-        System.out.println("The result is: " + result);  // Print the result
+        System.out.println("The result is: " + result);  
     }
 }
 
